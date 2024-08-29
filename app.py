@@ -81,20 +81,6 @@ def welcome():
     name = session.get('name', 'Guest')
     return render_template('welcome.html', name=name)
 
-@app.route('/view')
-def view_records():
-    users = LoginDetails.query.all()
-    return render_template('view_users.html', users=users)
-
-@app.route('/delete_user/<int:user_id>')
-def delete_user(user_id):
-    user = LoginDetails.query.get(user_id)
-    if user:
-        db.session.delete(user)
-        db.session.commit()
-        return "User deleted!"
-    return "User not found!"
-
 @app.route('/logout')
 def logout():
     session.clear()  # Clear the session to log out the user
