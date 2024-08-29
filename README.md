@@ -40,8 +40,8 @@ The `init_db()` function creates the database and tables if they do not already 
 1. Clone this repository:
 
     ```bash
-    git clone <repository_url>
-    cd <repository_directory>
+    git clone <https://github.com/ash1009/Flask-User-Authentication-System/tree/main>
+    cd <Flask User Authentication System>
     ```
 
 2. Install the required dependencies:
